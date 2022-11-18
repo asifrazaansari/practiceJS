@@ -13,14 +13,3 @@ function recurFlatten(array){
 }
 
 //console.log(recurFlatten(array))
-
-let arr = ["hi", "hello"]
-function captialFirst(arr){
-    for(let i=0; i<arr.length; i++){
-        //console.log(arr[i][0])
-        arr[i][0] = arr[i][0].toUpperCase()
-        console.log(arr[i][0].toUpperCase())
-    }
-    return arr
-}
-console.log(captialFirst(arr))
