@@ -16,4 +16,12 @@ function recurPalindrome(str){
     // }
     return (str[0] == str.slice(-1) && recurPalindrome(str.slice(1,-1)))
 }
-console.log(recurPalindrome("refer"))
+//console.log(recurPalindrome("refer"))
+
+
+function num(n){
+    if( n===1) return n
+    return num(n-1)
+}
+
+console.log(num(5))
