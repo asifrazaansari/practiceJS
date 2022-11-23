@@ -19,4 +19,15 @@ const cap = (arr) => {
     return cap(arr)
 }
 
-console.log(cap(arr))
+//console.log(cap(arr))
+
+function captialiseFirst(arr){
+    const result = []
+
+    if(arr.length === 0) return []
+    let s = arr[0][0].toUpperCase() + arr[0].slice(1)
+    result.push(s)
+    return result.concat(captialiseFirst(arr.slice(1)))
+}
+
+console.log(captialiseFirst(arr))
