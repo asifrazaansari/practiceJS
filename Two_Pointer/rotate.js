@@ -25,6 +25,7 @@ const rotate = function (nums, k) {
 console.log(rotate([1,2], 5))
 
 /*
+//method2
 function reverse(arr) {
     let l = 0, r = arr.length - 1
     while (l < r) {
@@ -47,7 +48,7 @@ var rotate = function (nums, k) {
 
 
 
-
+//method3
 var rotate = function(nums, k) {
     let length = nums.length;
     let result = [...nums];
