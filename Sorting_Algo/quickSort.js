@@ -8,10 +8,10 @@ function partition(arr, left, right) {
 
     let pivotEle = arr[right]
 
-    let swapInd = left  - 1
+    let swapInd = left - 1
 
-    for(let i = left; i < right; i++){
-        if(arr[i] < pivotEle){
+    for (let i = left; i < right; i++) {
+        if (arr[i] < pivotEle) {
             swapInd++
             swap(arr, swapInd, i)
         }
