@@ -1,4 +1,4 @@
-const arr = [5,6,7,8,9,361,45,62]
+
 /*
 function conquer(arr, startInd, endInd){
     const merged = new Array(endInd - startInd + 1)
@@ -39,6 +39,8 @@ function divide(arr, startInd, endInd){
     conquer(arr, startInd, mid, endInd)
 }
 */
+const arr = [5,6,7,8,9,361,45,62]
+
 
 function merge(arr1, arr2){
     const result  = []

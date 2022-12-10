@@ -24,7 +24,7 @@ function uniquePairSum(arrays, target) {
     return result
 }
 
-//console.log(uniquePairSum([4, 2, 3, 4, 7, 8, 9, 6, 2, 14, 5, 1, 3, 1], 4))
+console.log(uniquePairSum([1,5,5], 6))
 
 
 
@@ -49,13 +49,3 @@ function pairSum(arr, target){
 }
 
 //console.log(pairSum([0, 0, 0, 0, 0, -1, -1, -1, -1, -1], -1))
-
-function freqPairSum(arr, target){
-    const obj = {}
-
-    for(const key of arr) obj[key] = arr
-
-    console.log(obj)
-}
-
-console.log(freqPairSum([0, 0, 0, 0, 0, -1, -1, -1, -1, -1], -1))

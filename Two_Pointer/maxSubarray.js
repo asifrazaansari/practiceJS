@@ -1,6 +1,6 @@
 var maxSubArray = function(nums) {
     let maxSum = nums[0], currentSum = 0
-    let left = 0, right = nums.length
+    let left = 0, right = nums.length - 1
     while(left < right){
         currentSum += nums[left]
         maxSum = Math.max(currentSum, maxSum)
