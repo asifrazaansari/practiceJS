@@ -1,2 +1,2 @@
 # practiceJS
-JavaScript practicing questions and answers
+DSA Questions and Answers using JavaScript
