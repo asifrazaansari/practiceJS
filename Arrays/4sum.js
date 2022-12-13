@@ -38,7 +38,7 @@ function fourSum(nums, target) {
 }
 
 
-//console.log(fourSum(nums, target))
+console.log(fourSum(nums, target))
 
 /*
 function forSum(nums, target){
