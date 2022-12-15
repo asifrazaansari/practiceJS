@@ -75,15 +75,15 @@ while(k){
 console.log(array1)
 */
 const num = [9, 7, 4, 3, 8, 1, 2]
-function manipulatingNum(ind, num) {
-    let cutArray = [];
+function manipulatingNum(num, ind) {
+    const cutArray = [];
 
     for (let i = 0; i < ind; i++) {
-        cutArray.push(num[i])
-        num = num.unshift()
+        cutArray.push(num[0])
+        num.shift()
     }
     const finalArray = [...num, ...cutArray]
 
     return finalArray
 }
-console.log(manipulatingNum(2, num))
+console.log(manipulatingNum(num, 3))

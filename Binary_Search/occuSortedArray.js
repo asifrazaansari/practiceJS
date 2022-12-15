@@ -34,35 +34,53 @@ function searchRange(nums, target) {
 */
 
 // method3
-const searchRange = function(nums, target) {
-    let left =0, right = nums.length - 1
+const searchRange = function (nums, target) {
+    let left = 0, right = nums.length - 1
     let leftOccurr = -1, rightOcurr = -1
 
     //left occurrence
-    while(left <= right){
+    while (left <= right) {
         let mid = Math.floor(left + (right - left) / 2)
 
-        if(nums[mid] === target){
+        if (nums[mid] === target) {
             leftOccurr = mid
             right = mid - 1
         }
-        else if(nums[mid] < target) left = mid + 1
+        else if (nums[mid] < target) left = mid + 1
         else right = mid - 1
     }
 
     //right occurrence
-    left =0, right = nums.length - 1
-    while(left <= right){
+    left = 0, right = nums.length - 1
+    while (left <= right) {
         let mid = Math.floor(left + (right - left) / 2)
 
-        if(nums[mid] === target){
+        if (nums[mid] === target) {
             rightOcurr = mid
             left = mid + 1
         }
-        else if(nums[mid] < target) left = mid + 1
+        else if (nums[mid] < target) left = mid + 1
         else right = mid - 1
     }
     return [leftOccurr, rightOcurr]
 }
 
-console.log(searchRange([5,7,7,8,8,10], 8))
+console.log(searchRange([5, 7, 7, 8, 8, 10], 8))
+
+
+
+
+function findFirstAndLast(arr, x) {
+    let first = -1, last = -1;
+    for (let i = 0; i < arr.length; i++) {
+        if (x != arr[i])
+            continue;
+        if (first == -1)
+            first = i;
+        last = i;
+    }
+   return [first, last]
+}
+
+console.log(findFirstAndLast([1, 2, 2, 2, 2, 3, 4, 7, 8, 8], 8))
+

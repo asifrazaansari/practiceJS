@@ -9,6 +9,7 @@ const findGCD = function (nums) {
             largest = nums[i]
         }
     }
+    console.log(smallest, largest)
     // let greatestDivisor = 1
     // for(let i=2; i<=largest; i++){
     //     if(smallest % i == 0 && largest % i == 0){
@@ -26,4 +27,4 @@ const findGCD = function (nums) {
     }
 }
 
-console.log(findGCD([4, 8]))
+console.log(findGCD([8, 8, 16]))

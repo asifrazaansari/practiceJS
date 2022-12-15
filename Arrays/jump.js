@@ -1,4 +1,3 @@
-
 const nums = [2, 1, 0, 3]
 const jump = function (nums) {
 

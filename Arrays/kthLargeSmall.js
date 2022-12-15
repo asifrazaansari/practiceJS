@@ -1,8 +1,8 @@
 const arr = [5, 6, 7, 2, 5, 9, 7, 3, 4, 5, 69, 7, 14]
 
 
-function partition (arr, left, right){
-    function swap(arr, left, right){
+function partition(arr, left, right) {
+    function swap(arr, left, right) {
         let temp = arr[left]
         arr[left] = arr[right]
         arr[right] = temp
@@ -11,8 +11,8 @@ function partition (arr, left, right){
     let pivotEle = arr[right]
     let swapInd = left - 1
 
-    for(let i=left; i<right; i++){
-        if(arr[i] < pivotEle){
+    for (let i = left; i < right; i++) {
+        if (arr[i] < pivotEle) {
             swapInd++
             swap(arr, swapInd, i)
         }
@@ -22,21 +22,23 @@ function partition (arr, left, right){
 }
 
 
-function quickSelect(arr, left = 0, right = arr.length - 1,k){
-    let resultIndex = arr.length - k
+function quickSelect(arr, k) {
+    //arr = Array.from(new Set(arr)) //-----for unique element
+   
+    let resultIndex = arr.length - k, left = 0, right = arr.length - 1
 
-    while(left < right){
+    while (left < right) {
         let pivotIndex = partition(arr, left, right)
-        if(resultIndex === pivotIndex){
+        if (resultIndex === pivotIndex) {
             return arr[pivotIndex]
         }
-        if(resultIndex < pivotIndex){
+        if (resultIndex < pivotIndex) {
             right = pivotIndex - 1
-        }else{
+        } else {
             left = pivotIndex + 1
         }
     }
     return arr[left]
 }
 
-console.log(quickSelect(arr, left = 0, right = arr.length - 1, 3))
+console.log(quickSelect(arr, 5))

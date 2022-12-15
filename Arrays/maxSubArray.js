@@ -1,71 +1,65 @@
-/*
-Brute-force approach
 
-public class Solution {
-    public int MaxSubArray(int[] nums) {
-        
-        if(nums == null || nums.Length == 0)
-            return 0;
-        
-        int maxSum = nums[0];
-        
-        for(int i = 0; i < nums.Length; i++)
-        {
-            for(int j = i; j < nums.Length; j++)
-            {
-                int currSum = 0;
-                
-                for(int k = i; k <= j; k++)
-                {
-                    currSum += nums[k];
-                }
-                
-                maxSum = Math.Max(maxSum, currSum);
+//Brute-force approach
+
+function maxSubArray(nums) {
+
+    if (nums == null || nums.length == 0)
+        return 0;
+
+    let maxSum = nums[0];
+
+    for (let i = 0; i < nums.length; i++) {
+        for (let j = i; j < nums.length; j++) {
+            let currSum = 0;
+
+            for (let k = i; k <= j; k++) {
+                currSum += nums[k];
             }
+
+            maxSum = Math.max(maxSum, currSum);
         }
-        
-        return maxSum;
     }
+
+    return maxSum;
 }
+
+console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
 
 //improved version
-public class Solution {
-    public int MaxSubArray(int[] nums) {
-        
-        if(nums == null || nums.Length == 0)
-            return 0;
-        
-        int maxSum = nums[0];
-        
-        for(int i = 0; i < nums.Length; i++)
-        {
-            int currSum = 0;
-                
-            for(int j = i; j < nums.Length; j++)
-            {
-                currSum += nums[j];
-                maxSum = Math.Max(maxSum, currSum);
-            }
+function MaxSubArray(nums) {
+
+    if (nums == null || nums.length == 0)
+        return 0;
+
+    let maxSum = nums[0];
+
+    for (let i = 0; i < nums.length; i++) {
+        let currSum = 0;
+
+        for (let j = i; j < nums.length; j++) {
+            currSum += nums[j];
+            maxSum = Math.max(maxSum, currSum);
         }
-        
-        return maxSum;
     }
+
+    return maxSum;
 }
 
-
+console.log(MaxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
+/*
 //Dynamic Programming approach
 public class Solution {
-    public int MaxSubArray(int[] nums) {
+    public let MaxSubArray(let[] nums) {
         
-        if(nums == null || nums.Length == 0)
+        if(nums == null || nums.length == 0)
             return 0;
         
-        int[] dp = new int[nums.Length];
+        let[] dp = new let[nums.length];
         dp[0] = nums[0];
         
-        for(int i = 1; i < nums.Length; i++)
+        for(let i = 1; i < nums.length; i++)
         {
-            dp[i] = Math.Max(dp[i - 1] + nums[i], nums[i]);
+            dp[i] =Math.max(dp[i - 1] + nums[i], nums[i]);
         }
         
         return dp.Max();        
@@ -78,16 +72,16 @@ public class Solution {
 
 
 //  kaden's algo
-function maxSubArray(arr){
+function maxSubArr(arr) {
     let maxSum = arr[0], currentSum = 0
 
-    for(let i=0; i<arr.length; i++){
+    for (let i = 0; i < arr.length; i++) {
         currentSum += arr[i]
         maxSum = Math.max(currentSum, maxSum)
 
-        if(currentSum < 0) currentSum = 0
+        if (currentSum < 0) currentSum = 0
     }
     return maxSum
 }
 
-console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
+console.log(maxSubArr([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
