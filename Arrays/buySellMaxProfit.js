@@ -11,4 +11,4 @@ function maxProfit(prices) {
 }
 
 
-console.log(maxProfit([2,1,2,1,0,1,2]))
+console.log(maxProfit([1,1,2,1,6,1,2]))
