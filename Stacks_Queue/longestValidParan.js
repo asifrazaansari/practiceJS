@@ -1,5 +1,6 @@
-const s = s = "(()"
+const s =  ")()())"
 
+/*
 var longestValidParentheses = function(s) {
     let open = 0, close = 0, maxLen = 0;
 
@@ -20,7 +21,7 @@ var longestValidParentheses = function(s) {
     }
     return maxLen;
 };
-
+*/
 
 // stack approach
 var longestValidParentheses = function(s) {
@@ -41,4 +42,6 @@ var longestValidParentheses = function(s) {
     }
   
     return longest
-};
+}
+
+console.log(longestValidParentheses(s))
