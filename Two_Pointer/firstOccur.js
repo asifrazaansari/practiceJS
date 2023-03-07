@@ -1,26 +1,27 @@
 const haystack = "mississippi", needle = "issip"
 
 
-// const strStr = function(haystack, needle) {
-//     let haystackPointer = 0, needlePointer = 0
+const strStr = function(haystack, needle) {
+    let haystackPointer = 0, needlePointer = 0
 
-//     //let firstOccur = -1
 
-//     while(haystackPointer < haystack.length){
-//         if(haystack[haystackPointer] === needle[needlePointer]){
-//             haystackPointer++
-//             needlePointer++
-//             if(needlePointer === needle.length){
-//                 return haystackPointer - needlePointer
-//             }
-//         }else if(haystack[haystackPointer] !== needle[needlePointer]){
-//             haystackPointer++
-//             needlePointer = 0
-//         }
-//     }
+    while(haystackPointer < haystack.length){
+        if(haystack[haystackPointer] === needle[needlePointer]){
+            haystackPointer++
+            needlePointer++
+            if(needlePointer === needle.length){
+                return haystackPointer - needlePointer
+            }
+        }else if(haystack[haystackPointer] !== needle[needlePointer]){
+            haystackPointer = haystackPointer - needlePointer + 1;
+            needlePointer = 0
+        }
+    }
 
-//     return -1
-// };
+    return -1
+};
+
+/*
 
 var strStr = function(haystack, needle) {
     if (!needle) return 0
@@ -57,5 +58,5 @@ var strStr = function(haystack, needle) {
     return -1;                                        // return -1 if there wasn't a match
   };
 
-
+*/
 console.log(strStr(haystack, needle))
